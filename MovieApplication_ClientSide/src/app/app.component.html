@@ -1,0 +1,19 @@
+
+<!-- <a href="login"><app-login></app-login></a>
+<app-register></app-register> -->
+<!-- <app-crud></app-crud>  -->
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <div>
+            <button mat-button routerLink="/">Home</button>
+        </div>
+        <br />
+
+        <button mat-button routerLink="register">Register</button>
+        <br />
+        <button mat-button routerLink="login">Login</button>
+        <br />
+        <button mat-button routerLink="crud">CRUD</button>
+
+    </mat-drawer>
+<router-outlet></router-outlet>

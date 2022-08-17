@@ -1,0 +1,40 @@
+
+<form [formGroup]="getRegisterDetails" (ngSubmit)="submitRegisterForm()" style="background-color:rgb(202, 129, 129) ">
+  <div class="line">
+      <h1> Register </h1>
+  </div>
+      
+  <div class="line1">
+    <mat-form-field class="textInput" appearance="fill">
+        <mat-label>User name </mat-label>
+        <input matInput #username formControlName="username" required [(ngModel)]="user.username">
+    </mat-form-field>
+</div>
+  <div class="line2">
+      <mat-form-field class="emailInput" appearance="fill">
+          <mat-label> Email Address </mat-label>
+          <input matInput #email formControlName="email" required [(ngModel)]="user.email">
+      </mat-form-field>
+  </div>
+  <div class="line3">
+      <mat-form-field class="passwordInput" appearance="fill">
+        
+          <mat-label> Password </mat-label>
+          
+          <input matInput #password formControlName="password" [type]="showPasswordOnPress ? 'text' : 'password'" required [(ngModel)]="user.password">
+          <div (mousedown)="showPasswordOnPress = !showPasswordOnPress"
+               (mouseup)="showPasswordOnPress = !showPasswordOnPress">
+              <!-- <i alt="show" class="fas fa-eye eye-show"
+                [class.hide]="showPasswordOnPress"> </i>
+              <i alt="hide" class="fas fa-eye-slash eye-hide"
+                [class.hide]="!showPasswordOnPress"> </i> -->
+          </div>
+      </mat-form-field>
+  </div>
+ 
+  <div class="line6">
+      <button mat-raised-button type="submit" [disabled]="!getRegisterDetails.valid"> Register </button>
+  </div>
+</form>
+
+

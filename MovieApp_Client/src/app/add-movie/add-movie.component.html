@@ -1,0 +1,34 @@
+<div class="container">
+<h2>Add your favourite Movie:</h2>
+  <form >
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>MovieId</mat-label>
+        <input matInput name="movieId"
+        [(ngModel)] ="movie.movieId">
+        </mat-form-field>
+      <br> 
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>MovieName</mat-label>
+        <input matInput name="movieName"
+        [(ngModel)] ="movie.movieName">
+        </mat-form-field>
+      <br> 
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Genre</mat-label>
+        <input matInput name="genre"
+        [(ngModel)] ="movie.genre">
+        </mat-form-field>
+      <br> 
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Rating</mat-label>
+        <input matInput name="rating"
+        [(ngModel)] ="movie.rating">
+        </mat-form-field>
+      <br> 
+      <br>
+      <br>
+      <button type="submit" class="btn btn-success" (click)="addMovieFormSubmit()" >SUBMIT</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="submit" class="btn btn-primary" (click)="goToList()">GO BACK</button>
+    </form>
+</div>

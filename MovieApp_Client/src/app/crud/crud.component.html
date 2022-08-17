@@ -1,0 +1,35 @@
+<div class="container">
+<h1>MY FAVOURITE MOVIES:</h1>         
+<table class="table" >
+  <thead>
+    <tr>
+        <th>Movie ID</th> &nbsp; &nbsp;
+        <th>MovieName</th>  &nbsp; &nbsp;
+        <th>Genre</th>  &nbsp; &nbsp;
+        <th>Rating</th>  &nbsp; &nbsp;
+        <th>Operations:</th>
+    </tr>
+  </thead>
+  <tbody >
+    
+      <tr *ngFor="let movie1 of movie.movieList">
+        
+        <td>{{movie1.movieId}}</td>  &nbsp; &nbsp; &nbsp;
+        <td>{{movie1.movieName}}</td> &nbsp; &nbsp; &nbsp;
+        <td>{{movie1.genre}}</td>  &nbsp; &nbsp; &nbsp;
+        <td>{{movie1.rating}}</td>  &nbsp; &nbsp; &nbsp;
+        <td>
+           <button type="button" style="font-size: 10px;" class="btn btn-primary" (click)="goToEditMovie(movie1.movieId)"><td><mat-icon >edit</mat-icon></td></button>&nbsp;&nbsp;&nbsp;&nbsp;
+           <button type="button" style="font-size: 10px;"class="btn btn-danger"  (click)="deleteMovie(movie1.movieId)"><td><mat-icon >delete</mat-icon></td></button>
+        </td> 
+      </tr>
+  </tbody>
+</table>
+<button type="button" class="btn btn-success" (click)="goToAddMovie()">Add Movie</button>
+<button type="button"  class="btn btn-success" (click)="logout()">Logout</button>
+</div>
+
+
+
+
+

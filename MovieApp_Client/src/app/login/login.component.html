@@ -1,0 +1,28 @@
+
+<form class="example-form" style="text-align:center ; background-color: beige;">
+
+
+    <h1 routerLink="login"> Login </h1>
+
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput placeholder="Enter your email" name="email"
+    [(ngModel)] ="user.email">
+    </mat-form-field>
+
+    <br/>
+
+
+<mat-form-field class="passwordInput" appearance="fill">
+        <mat-label> Password </mat-label>
+        <input type="password" matInput placeholder="Enter your password" name="password"   [(ngModel)]="user.password">
+    </mat-form-field>
+
+    <br/>
+    <button mat-raised-button type="submit" (click)="loginCheck()"> Login </button>
+    &nbsp;  &nbsp; &nbsp; &nbsp;
+    <button (click)="goToRegister()" type="button" class="btn">New user?Click me!</button>
+
+
+</form>
